@@ -1,7 +1,5 @@
 <?php 
 
-// CRUD (Create, Read, Update, Delete)
-
 // Membuat array
 $mahasiswa = array('Heri', 'Indah', 'Rizki', 'Putri');
 print_r($mahasiswa);
@@ -49,4 +47,79 @@ print_r($jurusan);
 echo "Jumlah array adalah : ";
 echo count($jurusan);
 
-// interpreted language 
+// =====================================================
+
+
+// lebih kompleks
+
+$klub =[
+   'nama'	=> 'Paris St. Germain',
+   'negara'	=> 'Prancis',
+   'liga'	=> 'Ligue 1',
+   'pemain'	=> [
+      [
+         'nama'		=> 'Keylor Navas',
+         'posisi'	=> 'GK',
+         'nomor'	=> 1,
+         'negara'	=> 'Kosta Rika'
+      ],
+      [
+     
+        'nama'		=>'Presnel Kimpembe',
+        'posisi'	=>'DF',
+        'nomor'		=>3,
+        'negara'	=>'Prancis'
+      ],
+      [
+       
+        'nama'		=> 'Thilo Kehrer',
+        'posisi'	=> 'DF',
+        'nomor'		=> 4,
+        'negara'	=> 'Jerman'
+      ],
+     // dan sebagainya
+   ]
+];
+
+echo 'Citra Febriawirti';
+echo '<br>';
+echo '2011100032';
+echo '<hr>';
+echo '<br>';
+
+echo $klub['nama'] ;
+echo ' adalah salah satu klub dari ';
+echo $klub['negara']; 
+echo ' yang bermain di '; 
+echo $klub['liga']; 
+echo '. Dengan daftar pemain sebagai berikut  '; 
+echo $klub['pemain'][0]['nama'] ;
+echo ' ,'; 
+echo $klub['pemain'][1]['nama'] ;
+echo ' ,'; 
+echo $klub['pemain'][2]['nama'] ;
+echo ' ,'; 
+echo ' dan sebagainya';
+
+printf(
+  "%s adalah salah satu klub dari %s yang bermain di %s. Dengan daftar pemain sebagai berikut %s, %s, %s dan sebagainya", 
+  $klub['nama'],
+  $klub['negara'],
+  $klub['liga'],
+  $klub['pemain'][0]['nama'],
+  $klub['pemain'][1]['nama'],
+  $klub['pemain'][2]['nama']
+);
+
+$variabel = sprintf(
+  "%s adalah salah satu klub dari %s yang bermain di %s. Dengan daftar pemain sebagai berikut %s, %s, %s dan sebagainya", 
+  $klub['nama'],
+  $klub['negara'],
+  $klub['liga'],
+  $klub['pemain'][0]['nama'],
+  $klub['pemain'][1]['nama'],
+  $klub['pemain'][2]['nama']
+);
+
+echo $variabel;
+
